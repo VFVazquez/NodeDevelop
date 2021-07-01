@@ -6,7 +6,7 @@ const port = 8080;
 var cowsay = require('cowsay')
 var app = express();
 
-app.get('/mensaje', (req, res) => {
+app.get('/cowsay', (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/txt');
     res.end(
@@ -19,5 +19,5 @@ app.get('/mensaje', (req, res) => {
 });
 
 app.listen(port, function() {
-	console.log('Servidor http://' + hostname + ':' + port + '/');
+	console.log('Servidor http://' + hostname + ':' + port + '/cowsay?mensaje=IntroduceTexto');
 });
